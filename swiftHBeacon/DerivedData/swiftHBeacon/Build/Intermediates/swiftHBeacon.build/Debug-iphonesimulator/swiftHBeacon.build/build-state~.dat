@@ -1,0 +1,82 @@
+TswiftHBeacon
+v7
+r1
+cCheck dependencies
+cCompileSwift normal x86_64 com.apple.xcode.tools.swift.compiler
+
+CCheck dependencies
+r0
+lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesa1684234d650b941^b4af4834d650b941^---0#1#1#--18"Check dependencies36"A55853BA-53D6-4AA8-A9F8-64AB4DB92FA5-
+
+CCompileAssetCatalog /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Products/Debug-iphonesimulator/swiftHBeacon.app /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/Images.xcassets
+r0
+
+CCompileStoryboard /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/Base.lproj/Main.storyboard
+r0
+
+CCompileSwift normal x86_64 com.apple.xcode.tools.swift.compiler
+s424728116.284906
+e424728116.481894
+r0
+xCompileSwift
+xnormal
+xx86_64
+xcom.apple.xcode.tools.swift.compiler
+o/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: consecutive statements on a line must be separated by ';'
+olet _singletonAgent : BeaconReceiveAgent()
+o                                        ^
+o                                        ;
+o/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: expressions are not allowed at the top level
+olet _singletonAgent : BeaconReceiveAgent()
+o                                        ^
+o/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: consecutive statements on a line must be separated by ';'
+olet _singletonAgent : BeaconReceiveAgent()
+o                                        ^
+o                                        ;
+o/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: expressions are not allowed at the top level
+olet _singletonAgent : BeaconReceiveAgent()
+o                                        ^
+o/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: consecutive statements on a line must be separated by ';'
+olet _singletonAgent : BeaconReceiveAgent()
+o                                        ^
+o                                        ;
+o/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: expressions are not allowed at the top level
+olet _singletonAgent : BeaconReceiveAgent()
+o                                        ^
+o/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:5: error: 'let' declarations require an initializer expression
+olet _singletonAgent : BeaconReceiveAgent()
+o    ^
+o/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:22:12: error: 'BeaconBroadcastAgent' is not convertible to 'BeaconReceiveAgent'
+o    return _singletonAgent;
+o           ^
+o/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: consecutive statements on a line must be separated by ';'
+olet _singletonAgent : BeaconReceiveAgent()
+o                                        ^
+o                                        ;
+o/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: expressions are not allowed at the top level
+olet _singletonAgent : BeaconReceiveAgent()
+o                                        ^
+lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection26"Compile Swift source files63"CompileSwift normal x86_64 com.apple.xcode.tools.swift.compiler44354934d650b941^465d7b34d650b941^-2718"/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: consecutive statements on a line must be separated by ';'let _singletonAgent : BeaconReceiveAgent()                                        ^                                        ;/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: expressions are not allowed at the top levellet _singletonAgent : BeaconReceiveAgent()                                        ^/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: consecutive statements on a line must be separated by ';'let _singletonAgent : BeaconReceiveAgent()                                        ^                                        ;/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: expressions are not allowed at the top levellet _singletonAgent : BeaconReceiveAgent()                                        ^/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: consecutive statements on a line must be separated by ';'let _singletonAgent : BeaconReceiveAgent()                                        ^                                        ;/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: expressions are not allowed at the top levellet _singletonAgent : BeaconReceiveAgent()                                        ^/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:5: error: 'let' declarations require an initializer expressionlet _singletonAgent : BeaconReceiveAgent()    ^/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:22:12: error: 'BeaconBroadcastAgent' is not convertible to 'BeaconReceiveAgent'    return _singletonAgent;           ^/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: consecutive statements on a line must be separated by ';'let _singletonAgent : BeaconReceiveAgent()                                        ^                                        ;/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift:13:41: error: expressions are not allowed at the top levellet _singletonAgent : BeaconReceiveAgent()                                        ^4(36%IDEClangDiagnosticActivityLogMessage2@57"Consecutive statements on a line must be separated by ';'-424728116#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@117"file:///Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift0000000000000000^12#40#12#40#0#0#1#20"Swift Compiler Error--2@44"Expressions are not allowed at the top level-424728116#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic3@117"file:///Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift0000000000000000^12#40#12#40#0#0#1#20"Swift Compiler Error--2@52"'let' declarations require an initializer expression-424728116#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic3@117"file:///Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift0000000000000000^12#4#12#4#0#0#1#20"Swift Compiler Error--2@65"'BeaconBroadcastAgent' is not convertible to 'BeaconReceiveAgent'-424728116#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic3@117"file:///Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift0000000000000000^21#11#21#11#0#0#1#20"Swift Compiler Error--0#0#1#--3694"CompileSwift normal x86_64 com.apple.xcode.tools.swift.compiler    cd /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon    export PATH="/Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode6-Beta.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -target x86_64-apple-ios6.0 -module-name swiftHBeacon -O0 -sdk /Applications/Xcode6-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator8.0.sdk -g -module-cache-path /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/ModuleCache -I /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Products/Debug-iphonesimulator -F /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Products/Debug-iphonesimulator -c -j4 /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/SecondViewController.swift /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconReceiveAgent.swift /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/AppDelegate.swift /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/FirstViewController.swift /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/src/BeaconAgents/BeaconBroadcastAgent.swift -output-file-map /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/Objects-normal/x86_64/swiftHBeacon-OutputFileMap.json -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/Objects-normal/x86_64/swiftHBeacon.swiftmodule -Xcc -iquote -Xcc /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/swiftHBeacon-generated-files.hmap -Xcc -I/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/swiftHBeacon-own-target-headers.hmap -Xcc -I/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/swiftHBeacon-all-target-headers.hmap -Xcc -iquote -Xcc /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/swiftHBeacon-project-headers.hmap -Xcc -I/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Products/Debug-iphonesimulator/include -Xcc -I/Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Xcc -I/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/DerivedSources/x86_64 -Xcc -I/Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/DerivedSources -Xcc -DDEBUG=1 -emit-objc-header -emit-objc-header-path /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/Objects-normal/x86_64/swiftHBeacon-Swift.h36"95A7E0D6-F73E-409D-9B53-F1B992078008-
+b6C2B73C6-8077-4F1F-88A6-8212897AA1BF
+
+CCopySwiftLibs /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Products/Debug-iphonesimulator/swiftHBeacon.app
+r0
+
+CDitto /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/DerivedSources/swiftHBeacon-Swift.h /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/Objects-normal/x86_64/swiftHBeacon-Swift.h
+r0
+
+CDitto /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Products/Debug-iphonesimulator/swiftHBeacon.swiftmodule/x86_64.swiftmodule /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Intermediates/swiftHBeacon.build/Debug-iphonesimulator/swiftHBeacon.build/Objects-normal/x86_64/swiftHBeacon.swiftmodule
+r0
+
+CGenerateDSYMFile /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Products/Debug-iphonesimulator/swiftHBeacon.app.dSYM /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Products/Debug-iphonesimulator/swiftHBeacon.app/swiftHBeacon
+r0
+
+CLd /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Products/Debug-iphonesimulator/swiftHBeacon.app/swiftHBeacon normal x86_64
+r0
+
+CProcessInfoPlistFile /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Products/Debug-iphonesimulator/swiftHBeacon.app/Info.plist /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/swiftHBeacon/Info.plist
+r0
+
+CTouch /Volumes/DATA/MY_WORKS/Github/HBeaconSwift/swiftHBeacon/DerivedData/swiftHBeacon/Build/Products/Debug-iphonesimulator/swiftHBeacon.app
+r0
+
