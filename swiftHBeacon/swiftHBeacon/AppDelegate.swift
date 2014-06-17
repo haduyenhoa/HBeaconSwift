@@ -3,7 +3,7 @@
 //  swiftHBeacon
 //
 //  Created by Duyen Hoa Ha on 10/06/2014.
-//  Copyright (c) 2014 Rayonnance Technologies. All rights reserved.
+//  Copyright (c) 2014. All rights reserved.
 //
 
 import UIKit

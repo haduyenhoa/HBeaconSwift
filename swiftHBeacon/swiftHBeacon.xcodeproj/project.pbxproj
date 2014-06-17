@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDF9C0D2194F7F8100FAAA41 /* BeaconBroadcastAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF9C0D1194F7F8100FAAA41 /* BeaconBroadcastAgent.swift */; };
+		EDF9C0D3194F7F8100FAAA41 /* BeaconBroadcastAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF9C0D1194F7F8100FAAA41 /* BeaconBroadcastAgent.swift */; };
 		FD36CB7E19471C4F004633A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD36CB7D19471C4F004633A9 /* AppDelegate.swift */; };
 		FD36CB8019471C4F004633A9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD36CB7F19471C4F004633A9 /* FirstViewController.swift */; };
 		FD36CB8219471C4F004633A9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD36CB8119471C4F004633A9 /* SecondViewController.swift */; };
@@ -16,6 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EDE2F742194F823700C759A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD36CB7019471C4F004633A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD36CB7719471C4F004633A9;
+			remoteInfo = swiftHBeacon;
+		};
 		FD36CB8D19471C4F004633A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD36CB7019471C4F004633A9 /* Project object */;
@@ -26,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EDF9C0D1194F7F8100FAAA41 /* BeaconBroadcastAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconBroadcastAgent.swift; sourceTree = "<group>"; };
 		FD36CB7819471C4F004633A9 /* swiftHBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftHBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD36CB7C19471C4F004633A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD36CB7D19471C4F004633A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +66,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EDF9C0CF194F7F5E00FAAA41 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				EDF9C0D0194F7F5E00FAAA41 /* BeaconAgents */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		EDF9C0D0194F7F5E00FAAA41 /* BeaconAgents */ = {
+			isa = PBXGroup;
+			children = (
+				EDF9C0D1194F7F8100FAAA41 /* BeaconBroadcastAgent.swift */,
+			);
+			path = BeaconAgents;
+			sourceTree = "<group>";
+		};
 		FD36CB6F19471C4F004633A9 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +103,7 @@
 		FD36CB7A19471C4F004633A9 /* swiftHBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				EDF9C0CF194F7F5E00FAAA41 /* src */,
 				FD36CB7D19471C4F004633A9 /* AppDelegate.swift */,
 				FD36CB7F19471C4F004633A9 /* FirstViewController.swift */,
 				FD36CB8119471C4F004633A9 /* SecondViewController.swift */,
@@ -144,6 +171,7 @@
 			);
 			dependencies = (
 				FD36CB8E19471C4F004633A9 /* PBXTargetDependency */,
+				EDE2F743194F823700C759A1 /* PBXTargetDependency */,
 			);
 			name = swiftHBeaconTests;
 			productName = swiftHBeaconTests;
@@ -214,6 +242,7 @@
 				FD36CB8219471C4F004633A9 /* SecondViewController.swift in Sources */,
 				FD36CB7E19471C4F004633A9 /* AppDelegate.swift in Sources */,
 				FD36CB8019471C4F004633A9 /* FirstViewController.swift in Sources */,
+				EDF9C0D2194F7F8100FAAA41 /* BeaconBroadcastAgent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,12 +251,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD36CB9319471C4F004633A9 /* swiftHBeaconTests.swift in Sources */,
+				EDF9C0D3194F7F8100FAAA41 /* BeaconBroadcastAgent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EDE2F743194F823700C759A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD36CB7719471C4F004633A9 /* swiftHBeacon */;
+			targetProxy = EDE2F742194F823700C759A1 /* PBXContainerItemProxy */;
+		};
 		FD36CB8E19471C4F004633A9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FD36CB7719471C4F004633A9 /* swiftHBeacon */;
@@ -405,6 +440,7 @@
 				FD36CB9819471C4F004633A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD36CB9919471C4F004633A9 /* Build configuration list for PBXNativeTarget "swiftHBeaconTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +449,7 @@
 				FD36CB9B19471C4F004633A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
