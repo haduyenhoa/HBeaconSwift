@@ -2,6 +2,7 @@
 //  HBeaconRegion.swift
 //  swiftHBeacon
 //  My special beacon reagion
+//  This class keep track of
 //  Created by Duyen Hoa Ha on 17/06/2014.
 //  Copyright (c) 2014 Duyen Hoa Ha. All rights reserved.
 //
@@ -9,7 +10,7 @@
 import Foundation
 import CoreLocation
 
-class Hbeacon {
+class HBeaconRegion {
     var beaconsInRegion : CLBeacon[]?
     var beaconRegion : CLBeaconRegion?
     

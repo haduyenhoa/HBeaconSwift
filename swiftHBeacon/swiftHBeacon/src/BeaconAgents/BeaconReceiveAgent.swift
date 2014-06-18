@@ -10,12 +10,11 @@ import Foundation
 import CoreBluetooth
 import CoreLocation
 
-
 let kBeaconId = "com.hbeacon.test"
 
 protocol BeaconReceiverAgentDelegate {
-    mutating func newMessage (msg:String)
-    mutating func beaconUpdated()
+    func newMessage (msg:String)
+    func beaconUpdated()
 }
 
 class BeaconReceiveAgent : NSObject, CLLocationManagerDelegate {
@@ -23,10 +22,11 @@ class BeaconReceiveAgent : NSObject, CLLocationManagerDelegate {
     var delegate : BeaconReceiverAgentDelegate? //notify my delegate -> TODO: use an array of delegate
     
     var dictBeaconsToListen : Dictionary<String, CLBeaconRegion> //uuid & beacon to listen
-    var dictBeaconsInRange : Dictionary<String, CLBeaconRegion> //uuid & beacon currently in range
+    var dictBeaconsInRange : Dictionary<String, AnyObject[]> //uuid & hbeaconregion currently in range
     var dictLastVisitedBeacons : Dictionary<String, NSDate> //uuid & last visited time (moment when beacon was out of range
 
     var isReceiving : Bool = false
+    var receiverOn : Bool = false
     
     init()  {
         //these inits must be called before super.init()
@@ -74,6 +74,8 @@ class BeaconReceiveAgent : NSObject, CLLocationManagerDelegate {
             //add to dict
             self.dictBeaconsToListen[beaconUUID.UUIDString] = aBeacon
         }
+        
+        receiverOn = true
     }
     
     func stopListening() {
@@ -83,6 +85,9 @@ class BeaconReceiveAgent : NSObject, CLLocationManagerDelegate {
         }
         
         self.dictBeaconsToListen.removeAll(keepCapacity: false)
+        self.dictBeaconsInRange.removeAll(keepCapacity: false)
+        
+        receiverOn = false
     }
     
     func stopListening(anUUID : String?) {
@@ -92,10 +97,7 @@ class BeaconReceiveAgent : NSObject, CLLocationManagerDelegate {
                 self.locationManager.stopMonitoringForRegion(aBeaconRegion)
                 
                 //notice delegate
-                if let aDelegate = delegate {
-                    println("Stop listening to \(uuid)")
-//                    aDelegate.newMessage("Stop listening to \(uuid)")
-                }
+                delegate?.newMessage("Stop listening to \(uuid)")
             } else {
                 //this beacon is not exist in current dict
             }
@@ -109,7 +111,63 @@ class BeaconReceiveAgent : NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: AnyObject[]!, inRegion region: CLBeaconRegion!) {
+        println(__FUNCTION__)
+        //update
+        self.dictBeaconsInRange[region.proximityUUID.UUIDString] = beacons
+    }
+
+    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        println(__FUNCTION__)
+        //check if location service is enabled or not
+        if !CLLocationManager.locationServicesEnabled() {
+            if receiverOn {
+                println("Cannot search for beacon. Please enable location service")
+            }
+            
+            self.dictBeaconsInRange.removeAll(keepCapacity: false)
+            
+            //notify my delegate
+            delegate?.beaconUpdated()
+            return;
+        }
         
+        if CLLocationManager.authorizationStatus() != CLAuthorizationStatus.Authorized {
+            if receiverOn {
+                println("Cannot search for beacon. Location service does not authorize this application")
+            }
+            
+            self.dictBeaconsInRange.removeAll(keepCapacity: false)
+            
+            //notify my delegate
+            delegate?.beaconUpdated()
+            return;
+        }
+        
+        if receiverOn {
+            //start searching
+            delegate?.newMessage("Searching for beacon in region")
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
+        if receiverOn {
+            //start ranging
+            if let aBeaconRegion:CLBeaconRegion = region as? CLBeaconRegion {
+                //search for beacon region in my listening dict
+                if let regionEntered : CLBeaconRegion = self.dictBeaconsToListen[aBeaconRegion.proximityUUID.UUIDString] {
+                    locationManager.startRangingBeaconsInRegion(regionEntered)
+                }
+            }
+            
+            //notify
+            delegate?.beaconUpdated()
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
+        if receiverOn {
+            
+        }
     }
 }
 
