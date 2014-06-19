@@ -42,10 +42,10 @@ class BeaconBroadcastAgent : NSObject, CBPeripheralManagerDelegate {
     init() {
         //create boardcast reagion &
         super.init()
-        self.createBoardcastReagion()
+        self.createBoardcastReagion(1)
     }
     
-    func createBoardcastReagion() {
+    func createBoardcastReagion(var idx:Int) {
         println("Test <" + __FUNCTION__ + ">")
         if let aBroadcast = _broadcastBeacon {
             println("Beacon has already created")
@@ -53,11 +53,10 @@ class BeaconBroadcastAgent : NSObject, CBPeripheralManagerDelegate {
         } else {
             var broadcastUUID : String = "A77A1B68-49A7-4DBF-914C-760D07FBB87B"
             let broadcastMajor:UInt16 = 1
-            var broadcastIdx = 2
             
-            if (broadcastIdx == 1) {
+            if idx == 1 {
                 broadcastUUID = "A77A1B68-49A7-4DBF-914C-760D07FBB87B"
-                _broadcastBeacon = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: broadcastUUID), major: broadcastMajor, minor: 1, identifier: "com.hbeacon.test1")
+                _broadcastBeacon = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: broadcastUUID), major: broadcastMajor, minor: 1, identifier: kBeaconId1)
             } else {
                 broadcastUUID = "054fe7b1-a48f-41ae-8b92-0c151863236c"
                 _broadcastBeacon = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: broadcastUUID), major: broadcastMajor, minor: 1, identifier: "com.hbeacon.test2")
@@ -73,7 +72,7 @@ class BeaconBroadcastAgent : NSObject, CBPeripheralManagerDelegate {
             if let aBT = _broadcastBeacon {
                 //do nothing
             } else {
-                createBoardcastReagion()
+                createBoardcastReagion(1)
             }
         }
     }

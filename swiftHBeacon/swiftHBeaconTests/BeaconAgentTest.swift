@@ -18,29 +18,28 @@ class BeaconAgentTest : XCTestCase {
         super.tearDown()
     }
     
-    func createAnInstance() -> BeaconBroadcastAgent {
-        return BeaconBroadcastAgent();
-    }
-    
-    func createSingleton() -> BeaconBroadcastAgent {
+    func createBroadcastAgent() -> BeaconBroadcastAgent {
         return BeaconBroadcastAgent.shareAgent
     }
     
-    func testSingletonCreated() {
-        XCTAssertNotNil(createAnInstance(), "Cannot create an instance")
-        XCTAssertNotNil(createSingleton(), "Cannot create singleton")
+    func createReceiverAgent() -> BeaconReceiveAgent {
+        return BeaconReceiveAgent.shareClassAgent()
     }
     
-    func testSingletonsAreTheSame() {
-        var s1 = BeaconBroadcastAgent.shareAgent
-        var s2 = BeaconBroadcastAgent.shareAgent
-        XCTAssertTrue(s1 === s2)
+    func testAgentsCreated() {
+        XCTAssertNotNil(createBroadcastAgent(), "Cannot create an instance")
+        XCTAssertNotNil(createReceiverAgent(), "Cannot create singleton")
     }
     
-    func testSingletonsAreTheSame2() {
-        var s1 = BeaconBroadcastAgent.shareClassAgent()
-        var s2 = BeaconBroadcastAgent.shareClassAgent()
-        XCTAssertTrue(s1 === s2)
+    func testAgentsAreTheSame() {
+        XCTAssertTrue(createBroadcastAgent() === createBroadcastAgent())
+        XCTAssertTrue(createReceiverAgent() === createReceiverAgent())
+    }
+    
+    func testBroadcastRegionCreated() {
+        BeaconBroadcastAgent.shareClassAgent().createBoardcastReagion(1)
+        XCTAssertNotNil(BeaconBroadcastAgent.shareClassAgent()._broadcastBeacon, "Failed to create beacon")
+        XCTAssertEqualObjects(BeaconBroadcastAgent.shareClassAgent()._broadcastBeacon!.proximityUUID.UUIDString, "A77A1B68-49A7-4DBF-914C-760D07FBB87B", "this is not what I want")
     }
     
 }
