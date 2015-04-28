@@ -23,13 +23,13 @@ class BeaconReceiveAgent : NSObject, CLLocationManagerDelegate {
     var delegate : BeaconReceiverAgentDelegate? //notify my delegate -> TODO: use an array of delegate
     
     var dictBeaconsToListen : Dictionary<String, CLBeaconRegion> //uuid & beacon to listen
-    var dictBeaconsInRange : Dictionary<String, AnyObject[]> //uuid & CLBeacon[] currently in range
+    var dictBeaconsInRange : Dictionary<String, [AnyObject]> //uuid & CLBeacon[] currently in range
     var dictLastVisitedBeacons : Dictionary<String, NSDate> //uuid & last visited time (moment when beacon was out of range
 
     var isReceiving : Bool = false
     var receiverOn : Bool = false
     
-    init()  {
+    override init()  {
         //these inits must be called before super.init()
         self.dictBeaconsToListen = Dictionary()
         self.dictBeaconsInRange = Dictionary()
@@ -61,7 +61,6 @@ class BeaconReceiveAgent : NSObject, CLLocationManagerDelegate {
             return
         }
         
-        //
         stopListening()
         
         for beaconUUID in beaconUUIDs {
@@ -94,6 +93,9 @@ class BeaconReceiveAgent : NSObject, CLLocationManagerDelegate {
         }
     }
     
+/*
+@discussion stop receiving beacon. This function stops monitoring all beacon that it's listening to
+*/
     func stopListening() {
         for (anUUID) in self.dictBeaconsToListen.keys {
             //first, stop monitoring. it's not neccessary to add to last visisted range. this is done by another function
@@ -119,7 +121,6 @@ class BeaconReceiveAgent : NSObject, CLLocationManagerDelegate {
             }
         }
     }
- 
     
     //CLLocationManagerDelegate
     func locationManager(manager: CLLocationManager!, didStartMonitoringForRegion region: CLRegion!) {
@@ -127,7 +128,7 @@ class BeaconReceiveAgent : NSObject, CLLocationManagerDelegate {
         println("Entering region \(region.identifier)")
     }
     
-    func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: AnyObject[]!, inRegion region: CLBeaconRegion!) {
+    func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: CLBeaconRegion!) {
         println(__FUNCTION__)
         //update
         self.dictBeaconsInRange[region.proximityUUID.UUIDString] = beacons

@@ -3,7 +3,7 @@
 //  swiftHBeacon
 //
 //  Created by Duyen Hoa Ha on 16/06/2014.
-//  Copyright (c) 2014 Duyen Hoa Ha. All rights reserved.
+//  Copyright (c) 2014 Duyen Hoa HA. All rights reserved.
 //
 
 import Foundation
@@ -39,7 +39,7 @@ class BeaconBroadcastAgent : NSObject, CBPeripheralManagerDelegate {
         return Static.instance!
     }
     
-    init() {
+    override init() {
         //create boardcast reagion &
         super.init()
         self.createBoardcastReagion(1)
@@ -60,19 +60,6 @@ class BeaconBroadcastAgent : NSObject, CBPeripheralManagerDelegate {
             } else {
                 broadcastUUID = "054fe7b1-a48f-41ae-8b92-0c151863236c"
                 _broadcastBeacon = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: broadcastUUID), major: broadcastMajor, minor: 1, identifier: "com.hbeacon.test2")
-            }
-        }
-    }
-    
-    func createCBPeripheralManager() {
-        println(__FUNCTION__)
-        if let aBT = myBTManager {
-            println("BT Peripheral has already created")
-        } else {
-            if let aBT = _broadcastBeacon {
-                //do nothing
-            } else {
-                createBoardcastReagion(1)
             }
         }
     }

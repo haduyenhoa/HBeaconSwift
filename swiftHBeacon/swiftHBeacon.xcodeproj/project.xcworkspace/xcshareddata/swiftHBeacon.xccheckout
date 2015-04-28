@@ -10,29 +10,29 @@
 	<string>swiftHBeacon</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2C28BBF1-1BC2-441C-9990-5B4DBF051532</key>
+		<key>A9A20A2D29D2F5A953571D4F8025529BD4A8A8EB</key>
 		<string>https://github.com/haduyenhoa/HBeaconSwift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>swiftHBeacon/swiftHBeacon.xcodeproj/project.xcworkspace</string>
+	<string>swiftHBeacon/swiftHBeacon.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2C28BBF1-1BC2-441C-9990-5B4DBF051532</key>
+		<key>A9A20A2D29D2F5A953571D4F8025529BD4A8A8EB</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/haduyenhoa/HBeaconSwift.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2C28BBF1-1BC2-441C-9990-5B4DBF051532</string>
+	<string>A9A20A2D29D2F5A953571D4F8025529BD4A8A8EB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2C28BBF1-1BC2-441C-9990-5B4DBF051532</string>
+			<string>A9A20A2D29D2F5A953571D4F8025529BD4A8A8EB</string>
 			<key>IDESourceControlWCCName</key>
 			<string>HBeaconSwift</string>
 		</dict>
